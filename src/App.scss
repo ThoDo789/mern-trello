@@ -17,7 +17,7 @@ body{
 
     height: 100vh;
     display: grid;
-    grid-template-rows: 40px 50px 1fr;
+    grid-template-rows: #{$navbar-appbar-height} #{$navbar-boardbar-height} 1fr;
     background-color:$board-bg-color;
   
   

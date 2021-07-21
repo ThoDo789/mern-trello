@@ -2,18 +2,19 @@
 
 $card-border-radius:3px;
 
-li.card-item{
+.card-item{
     background-color: white;
     padding: $gap;
+    margin-top: $gap;
     border-radius: $card-border-radius;
     box-shadow: 0 2px 2px rgba(0,0,0,.1);
-
+    cursor: pointer;
 
     &:not(:last-child){
         margin-bottom: $gap;
     }
 }
-img{
+img.card-cover{
     display: block;
     width: calc(100% + 2 * #{$gap});
     margin: -$gap  0 $gap (-$gap);
