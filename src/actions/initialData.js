@@ -102,7 +102,7 @@ export const initialData = {
         {
           id: "column-3",
           boardId: "board-1",
-          title: "Inprogress column",
+          title: "List column",
           cardOrder: ["card-11", "card-12", "card-13"],
           cards: [
             {
