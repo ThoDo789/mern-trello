@@ -19,7 +19,12 @@ body{
     display: grid;
     grid-template-rows: #{$navbar-appbar-height} #{$navbar-boardbar-height} 1fr;
     background-color:$board-bg-color;
-  
+    color:$app-text-main;
+
+    .icon{
+        font-size:14px;
+        margin-right: 5PX;
+    }
   
     
 

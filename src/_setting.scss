@@ -4,14 +4,15 @@
 
 $gap: 10px;
 
-$board-bg-color:#0079bf;
-$common-element-bg:rgba(255,255,255,.24);
-
+ 
 $navbar-appbar-height:40px;
 $navbar-boardbar-height:50px;
-
-
-
+$column-border-radius:5px;
+//color
+$app-text-main:#333;
+$board-bg-color:#0079bf;
+$common-element-bg:rgba(255,255,255,.24);
+//screen
 $screen-lg: 1201px;
 $screen-md: 992px;
 $screen-sm: 768px;
