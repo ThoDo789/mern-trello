@@ -21,12 +21,13 @@
         border: 1px dashed #abc;
         margin: 5px 45px 5px 5px;
       }
+    
     .add-new-column{
         width:250px;
-        height:32px;
+        max-width: 250px;
         line-height:32px;
         padding:4px 0 4px 15px;
-        margin-left:$gap;
+        margin-left:calc(#{$gap} / 2) ;
         font-size:15px;
         color:#fff;
         cursor:pointer;
@@ -38,4 +39,30 @@
 
         }
     }
+    .enter-new-column{
+        width:250px;
+        max-width: 250px;
+        line-height:32px;
+        padding:4px  $gap;
+        margin-left:calc(#{$gap} / 2) ;
+        background-color:$column-bg-color;
+        border-radius: 5px;
+        input.input-enter-new-column{
+            margin: 5px 0;
+        }
+        span.cancel-new-column{
+            margin-left: $gap;
+            cursor:pointer;
+            color: $alert-danger;
+            i{
+                font-size: 18px;
+                &:hover{
+                    color: darken($alert-danger, 10)
+                }
+            }
+          
+        }
+    }
+   
+    
 }
