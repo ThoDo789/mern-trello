@@ -42,7 +42,7 @@ const Column = ({ column, onCardDrop }) => {
       <footer>
         <div className="footer-actions">
         <i className="fa fa-plus icon"></i>
-        Add another cards
+        Add another card
         </div>
        
         </footer>
