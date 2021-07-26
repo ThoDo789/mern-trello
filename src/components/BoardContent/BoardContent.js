@@ -93,7 +93,28 @@ newBoard.columnOrder = newColumns.map(c=>c.id)
 
     
 }
+const onUpdateColumn=(newColumnToUpdate)=>{
 
+  const columnIdToUpdate= newColumnToUpdate.id
+  let newColumns=[...columns]
+  const columnIndexToUpdate = newColumns.findIndex(item=>item.id===columnIdToUpdate)
+  
+  if(newColumnToUpdate._destroy){
+    //remove column
+    newColumns.splice(columnIndexToUpdate,1)
+
+  }else{
+      //update column
+      newColumns.splice(columnIndexToUpdate,1,newColumnToUpdate)
+      
+  }
+  let newBoard ={...board}
+  newBoard.columnOrder = newColumns.map(c=>c.id)
+  newBoard.columns = newColumns
+
+  setBoard(newBoard)
+  setColumns(newColumns)
+}
 
 
   return (
@@ -111,7 +132,7 @@ newBoard.columnOrder = newColumns.map(c=>c.id)
             >
             {columns.map((column, index) => (
               <Draggable  key={index} >
-                <Column column={column} onCardDrop={onCardDrop} />
+                <Column column={column} onCardDrop={onCardDrop} onUpdateColumn={onUpdateColumn} />
               </Draggable>
           ))}
      

@@ -23,15 +23,49 @@ $column-footer-height:36px;
         padding:0 8px;
     }
     header.column-drag-handle{
-        padding-left: 15px;
-        height: $column-header-height;
+        padding:0 7px;
+        padding-top:$gap;
         line-height: $column-header-height;
         font-size: 16px;
         font-weight: bold;
         border-top-left-radius: $column-border-radius;
         border-top-right-radius: $column-border-radius;
         cursor: pointer;
-
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        .column-title{
+            flex:0 0 85%; 
+        }
+        .column-drag-handle{
+               
+        }
+        .column-dropdown-actions{
+            flex:0 0 10%;
+                button.dropdown-toggle{
+                    padding: 0 $gap;
+                    position: relative;
+                    top: -2px;
+                    &::after{
+                        content: "...";
+                        border: none;
+                        font-size: 21px;
+                         line-height: 17px;
+                    }
+                    &:hover{
+                        background-color: darken($column-bg-color, 10);
+                        border-radius: $column-border-radius;
+                    }
+                }
+                .dropdown-menu{
+                    padding:0;
+                    min-width: 200px;
+                    a.dropdown-item{
+                        padding:0.1rem 1rem;
+                        font-size:14px;
+                    }
+                }
+        }
     }
     footer{
         padding:$gap ;
@@ -45,7 +79,7 @@ $column-footer-height:36px;
         .footer-actions{
             transition: .2s;    
             // padding:0 5px;
-            margin:5px;
+            margin:0 5px;
             cursor:pointer;
                 &:hover{
                     color:#333;
