@@ -41,6 +41,8 @@ body{
     textarea.form-control:focus, 
     [contenteditable].form-control:focus {
          box-shadow: none;
+         border:1px solid $input-border-color;
+
     }
     .btn:focus, .btn:active{
         outline:none;
@@ -54,8 +56,20 @@ body{
         cursor:pointer;
         &:focus{
             background-color: #fff;
-            border:1px solid $input-border-color;
         }
+        
+    }
+    span.cancel-icon{
+        margin-left: $gap;
+        cursor:pointer;
+        color: $alert-danger;
+        i{
+            font-size: 18px;
+            &:hover{
+                color: darken($alert-danger, 10)
+            }
+        }
+      
     }
     
 }

@@ -89,8 +89,9 @@ $column-footer-height:36px;
         }
     }
     .card-list{
-        max-height: calc( 100% - #{$column-header-height} - #{$column-footer-height});
+        max-height: calc( 100% - #{$column-header-height} - #{$column-footer-height} - 44px);
         overflow-y: auto;
+       
         &::-webkit-scrollbar{
             -webkit-appearance: none;
         }    
@@ -119,7 +120,15 @@ $column-footer-height:36px;
             border: 1px dashed #abc;
             margin: 5px;
           }
-
+        .add-new-card-area{
+            
+            .textarea-enter-new-card{
+                min-height: 54px;
+                max-height: 162px;
+                margin-top: $gap;
+            } 
+        }
+      
      
     }
 }
