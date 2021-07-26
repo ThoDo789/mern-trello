@@ -108,7 +108,7 @@ useEffect(()=>{
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">Add card...</Dropdown.Item>
+              <Dropdown.Item href="#/action-1" onClick={toggleNewCardForm}>Add card...</Dropdown.Item>
               <Dropdown.Item href="#/action-2" onClick={toggleConfirmModal}>
                 Remove column...
               </Dropdown.Item>
